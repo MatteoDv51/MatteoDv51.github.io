@@ -1,0 +1,1592 @@
+
+
+
+    @font-face {
+    font-family: 'Caros Soft Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caros Soft Regular'), url(../assets/fonts/CarosSoft.woff) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Caros Soft Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caros Soft Thin'), url(../assets/fonts/CarosSoftThin.woff) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Caros Soft ExtraLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caros Soft ExtraLight'), url(../assets/fonts/CarosSoftExtraLight.woff) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Caros Soft Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caros Soft Light'), url(../assets/fonts/CarosSoftLight.woff) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Caros Soft Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caros Soft Medium'), url(../assets/fonts/CarosSoftMedium.woff) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Caros Soft Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caros Soft Bold'), url(../assets/fonts/CarosSoftBold.woff) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Caros Soft ExtraBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caros Soft ExtraBold'), url(../assets/fonts/CarosSoftExtraBold.woff) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Caros Soft Heavy';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caros Soft Heavy'), url(../assets/fonts/CarosSoftHeavy.woff) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Caros Soft Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Caros Soft Black'), url(../assets/fonts/CarosSoftBlack.woff) format('woff');
+    }
+
+    @font-face {
+    font-family: 'BetterGrade';
+    font-style: normal;
+    font-weight: normal;
+    src: local('BetterGrade'), url(../assets/fonts/BetterGrade-519DV.ttf) format('woff');
+    }
+   
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+
+--orange: #eeaa33;
+--light-orange:#eebb55;
+--creme:#ffffee;
+--light-grey:#F8F7F1;
+--grey:#bbbbaa;
+--dark-green:#556655;
+--yellow:#ffcc11;
+--blue-green: #296F6D;
+}
+
+body{
+    font-family: 'CarosSoft';
+    background: var(--orange) repeat;
+    position:relative;
+    width: 100vw;
+    top:0;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
+    border-bottom: 1px solid #ffffff;
+    overflow-x: hidden;
+    padding: 20px 0px;
+    
+}
+
+.wave_top{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 50px;
+    
+    background-color: #ffffff;
+}
+
+
+.wave_top .header_wave{
+    position:absolute;
+    top:0;
+    left:0;    
+   
+}
+
+.copyright{
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Caros Soft thin';
+    color:#fff;
+    font-size: 14px;
+    z-index:2;
+}
+
+
+.overlay{
+    position:absolute;
+    z-index: 10;
+    
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--orange);
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'BetterGrade';
+    line-height: 0.7;
+    font-size: 60px;
+    font-weight: 400;
+    color:var(--blue-green);
+    text-align: right;
+}
+
+.overlay h1{
+    font-weight: 400;
+}
+
+.button_mp3{
+    position:absolute;
+    top: 10px;
+    right: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    font-family: 'Caros Soft ExtraBold';
+    color:#333;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button_mp3 h3 span{
+    font-size: 22px;
+    color: var(--blue-green)
+
+}
+.button_mp3 .border{
+    width: 30px;
+    height: 15px;
+    border: var(--orange);
+    border-radius: 7.5px ;
+    box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.2),
+    0px 1px 2px 1px rgb(0,0,0,0.1);
+    display: flex;
+    
+}
+
+.button_mp3 .border span{
+    content:"";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #e17f93;
+    position: relative;
+     box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.2),
+    0px 1px 2px 1px rgb(0,0,0,0.1);
+    left:3px;
+    top:1.2px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.button_mp3.active .border span{
+ left:14px;
+ transition: 0.2s  ease;
+ cursor: pointer;
+ background-color: #0abeb8;
+ box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.2),
+    0px 1px 2px 1px rgb(0,0,0,0.1),
+    0px 0px 10px #0abeb8, 0px 0px 40px #0abeb8, 0px 0px 80px;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 95vh;
+    width: 90vw;
+    border: 1px solid var(--orange);
+    background-color: #fff;    
+    margin: 5vh auto;
+    border-radius: 30px;
+    border-top: 1px solid rgb(255,255,255,0.5);
+    box-shadow: 5px 5px 10px 0px rgb(0,0,0,0.2);
+    backdrop-filter: blur(2px);
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: var(--blue-green)
+}
+nav a{
+    text-decoration: none;
+    color: var(--blue-green)
+}
+nav .logo h2{
+    font-family: 'BetterGrade';
+    font-weight: 500;
+    font-size: 45px;
+    
+}
+
+nav ul{
+    display: none;
+}
+
+
+nav .phone_number{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap:10px;
+    
+}
+
+nav .phone_number ion-icon{
+    position:relative;
+    top:-5px;
+    font-weight: 700;
+    padding: 6px 6px;
+ 
+    border-radius: 50%;
+    box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.2),
+    0px 1px 2px 1px rgb(0,0,0,0.1);
+    cursor: pointer;
+}
+
+
+.content{
+    
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    position:relative;
+    align-items: center;
+}
+
+
+
+.content img{
+    border-radius: 50%;
+    position: absolute;
+    left:50%;
+    top:62%;
+    transform: translate(-50%,-50%) scale(0.8);
+    width: 100%;
+    z-index: 0;
+    
+
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+    height: 100%;
+    justify-content: space-between;
+    padding: 30px  30px 60px 30px;
+    color:#333;   
+    
+}
+
+.left h1{
+    font-family: 'Caros Soft Extrabold';
+    font-weight: 500;
+    font-size: 32px;
+    color: var(--dark-green);
+    z-index: 1;
+}
+.left h1 span{
+    display: none;
+}
+
+.left .email p{
+    color: #333;
+    font-weight: 600;
+    font-family: 'Caros Soft Extrabold';
+    font-size: 14px;
+
+}
+
+.left .email a{
+    text-decoration: none;
+        font-family: 'Caros Soft Extrabold';
+        font-weight: 600;
+        font-size: 10px;
+        color: var(--blue-green)
+}
+
+.right{
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 50px 50px 60px 0px;
+    width: 50%;
+    height: 100%;
+    
+}
+
+.right .year, .right .project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    gap: 10px;
+    color: #333;
+    font-weight: 600;
+    
+}
+
+
+
+.right .year span, .right .project span{
+    font-size: 36px;
+    font-family: 'Caros Soft Extrabold';
+    font-weight: 600;
+    
+  
+    
+}
+
+.right .media a{
+    text-decoration: none;
+    color: var(--blue-green);
+}
+
+.right .media{
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 20px;
+    position:relative;
+    bottom: 80px;
+    color:var(--blue-green)
+}
+.right .media ion-icon{
+    padding: 10px;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+.right .media ion-icon:hover{
+    color:var(--orange);
+    transform: scale(1.15) translateX(-10px);
+    transition: ease-in-out 0.5s;
+
+}
+
+.bottom_banner{
+    
+    position:absolute;
+    bottom:-400px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    
+    border-radius: 25px 25px 0px 0px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0,0.2);
+    text-align: left;
+    padding: 30px 0px;
+    gap: 20px;
+    display:none;
+
+}
+
+.bottom_banner .link span{
+    padding: 8px;
+    font-size: 22px;
+    border-radius: 50%;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.3),
+    0px 1px 2px 2px rgb(0,0,0,0.2);
+}
+
+.bottom_banner .link:nth-child(1) span{
+    background-color: var(--blue-green);
+    position:absolute;
+    left: 40px;
+}
+.bottom_banner .link:nth-child(2) span{
+    background-color: var(--yellow);
+    position:absolute;
+    left: 40px;
+    
+}
+.bottom_banner .link:nth-child(3) span{
+    background-color: var(--orange);
+    position:absolute;
+    left: 40px;
+}
+
+.bottom_banner .link{
+    padding: 20px;
+    margin:auto;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    font-family: 'Caros Soft Extrabold';
+    position:relative;
+    
+
+    
+}
+.bottom_banner .link .text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    padding: 0 0 0 30px;
+}
+
+.bottom_banner .link p{
+    font-size: 13px;
+    color: #296F6D;    
+
+    
+    
+}
+.bottom_banner .link .detail{
+    font-size: 10px;
+    position:relative;    
+    padding: 5px 0 0 0;
+    
+}
+
+.wave,.wave2{
+    display: none;
+    
+}
+
+.about_me{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px;
+    width: 90vw;
+    border: 1px solid var(--orange);
+    background-color: #ffffee;
+    border-radius: 30px;    
+    margin: 50px auto auto;
+    
+    
+    position:relative;
+    top:-28px;
+    border-top: 1px solid rgb(255,255,255,0.5);
+    box-shadow: 0px 20px 10px 0px rgb(0,0,0,0.2);
+    backdrop-filter: blur(2px);
+    padding: 20px 0px 40px 0px;
+    
+
+}
+
+.about_me h3{
+    font-family: 'Caros Soft ExtraBold';
+    padding: 5px 0px;
+    color: #333;
+    font-size: 26px;
+    margin: 20px 0px;
+}
+
+.feedback{
+    position:absolute;
+    width: 20%;
+    right:0px;
+    bottom:0px;
+    z-index: 1;
+}
+
+
+.carousel{
+    
+    max-width: 100%;
+    margin: auto;
+    padding: 10px 30px;
+   
+    
+}
+
+.carousel .card{
+
+
+    min-height: 150px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 10px;
+    position: relative;
+    justify-content:center;
+    align-items: center;
+    text-align: justify;
+    padding: 0px 15px;
+    box-shadow:  3px 3px 5px  rgb(0,0,0,0.2)
+}
+
+
+.carousel .card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position:absolute;
+    z-index: 2;
+    top:-25px;
+    left:0px;
+    right: 0px;
+    margin: 0 auto;
+    
+
+}
+
+.card p{
+    color: rgb(102, 101, 101);
+   font-family: 'Caros Soft Light';
+    text-align: center;
+    font-size: 14px;
+}
+
+.card span{
+
+    font-family: 'Caros Soft ExtraBold';
+    color:#296F6D;
+    font-size: 15px;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+
+    
+}
+
+/* project part */
+
+.work{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 0 auto auto ;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Caros Soft ExtraBold';
+    white-space: pre-wrap;
+    gap:20px;
+    line-height: 1;
+    padding: 30px 0px;
+    box-shadow: 0px 20px 10px 0px rgb(0,0,0,0.2);    
+    margin-bottom: 20px;
+    position:relative
+}
+.pink_wave{
+    position: absolute;
+    bottom: 0px;
+    z-index: 0;
+}
+.rating{
+    position:absolute;
+    width: 30%;
+    top:20%;
+    left: 10px;
+}
+
+.wave_container{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom:0;
+    left:0;
+}
+
+.wave_container .header_wave{
+    position:absolute;
+    top:0;
+    left:0;    
+   
+}
+
+
+.work .project{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    position: relative;
+      box-shadow: inset 2px 2px 3px 1px rgb(0,0,0,0.1),
+    5px 5px 5px 1px rgb(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: rgb(255,255,255,0.7);
+    margin-bottom: 40px;
+    
+    
+}
+.work h2{
+    display: block;
+    width: 100%;
+}
+
+.work img{
+    width: 90%;
+    margin:10px;
+    margin-top:20px;
+    
+    border-radius: 20px;
+    height: auto;
+}
+
+.work h3{
+    color:#296F6D;
+    border-bottom: #ccc 1px solid;
+    width: 100%;
+    padding: 10px 0px;
+    
+    ;
+
+}
+.work p{
+  color: rgb(102, 101, 101);
+   font-family: 'Caros Soft Light';
+    text-align: center;
+    font-size: 14px;
+    padding:20px;
+    font-weight: 600;
+}
+
+.work .project .imgBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0px;
+    padding: 0;
+    margin: 0px;
+    width: 100%;
+}
+
+.imgBox img{
+    width: 50%;
+    padding: 10px;
+}
+
+.imgBox img:nth-child(1){
+    border-radius: 20px 0px 0px 20px;
+    position: relative;
+    right: -10px;
+}
+.imgBox img:nth-child(2){
+    border-radius: 0px 20px 20px 0px;
+    position:relative;
+    left:-10px;
+}
+
+
+
+
+.school{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    width: 90vw;
+    border: 1px solid var(--orange);
+    background-color: #ffffff;
+    border-radius: 30px;    
+    margin: 50px auto auto;
+    min-height: 350px;
+    top:-28px;
+    
+    
+    position:relative;
+    
+    
+    box-shadow: 0px 20px 10px 0px rgb(0,0,0,0.2);
+    backdrop-filter: blur(2px);
+    padding: 55px 40px 75px 90px;
+    gap: 30px;
+    overflow: hidden;
+    
+
+}
+.school img{
+    
+    height: 70%;
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom:0;
+    margin: 0 auto;
+    z-index: 1;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.school .caption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+    width: 50%;
+}
+.school .caption h1{
+    
+    padding: 0px 25px;
+    position:relative;
+    font-size: 90px;
+    font-family: 'Caros Soft ExtraBold';
+    white-space: nowrap;
+    color:#e17f93;
+    animation: infiniteText 9.1s linear infinite;
+    text-transform: uppercase;
+}
+@keyframes infiniteText {
+
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-43%);
+    }
+    
+}
+.school .clone{
+    position: absolute !important;
+    
+    
+    color:transparent !important;
+    -webkit-text-stroke: #e17f93;
+    -webkit-text-stroke-width: 3px;
+    z-index: 2;
+
+}
+
+.front_skill, .back_skill{
+    display:none;
+}
+
+
+.school .pinceau{
+    position: absolute;
+    z-index: -1;
+    bottom:0;
+    right: 0;
+    transform: rotate(135deg) translateX(-300px) translateY(-100px);
+    
+    
+}
+.school h2{
+    font-family: 'Caros Soft ExtraBold';
+    font-size: 26px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #e17f93;
+    font-size: 26px;
+    left:0;
+    top: 30px;
+}
+.school h2 span{
+    font-family: 'Caros Soft Medium';
+    font-size: 26px;
+}
+
+.school p{
+    
+    display: block;
+    font-family: 'Caros Soft ExtraBold';
+    font-size: 20px;
+    color: var(--blue-green);
+    position: relative;
+    top: 50px;
+}
+
+.school span{
+    
+    font-family: 'Caros Soft Medium';
+    color: rgb(102, 101, 101);
+    font-size: 18px;
+}
+
+.school svg{
+    position: absolute;
+    left: 50px;
+    top:20px;
+}
+
+.school .ball{
+    background-color: white;
+    
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left:-49px;
+
+}
+
+.school .ball01{
+    background-color: var(--yellow);
+    /* box-shadow: 0px 0px 5px var(--yellow),
+     0px 0px 40px var(--yellow),
+      0px 0px 80px var(--yellow); */
+}
+.school .ball02{
+    background-color: #e17f93;
+     
+}
+.school .ball03{
+    background-color: var(--orange);
+}
+.school .ball04{
+    background-color: var(--dark-green);
+}
+
+@media (max-height:610px){
+    .left h1{
+        font-size: 24px;
+    }
+}
+
+
+@media (min-width:798px){
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 95vh;
+    width: 90vw;
+    border: 1px solid var(--orange);
+    background-color: #fff;    
+    margin: 5vh auto;
+    border-radius: 30px 30px 0px 0px;
+    border-top: 1px solid rgb(255,255,255,0.5);
+    box-shadow: 5px 5px 10px 0px rgb(0,0,0,0.2);
+    backdrop-filter: blur(2px);
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: var(--blue-green)
+}
+
+nav .logo h2{
+    font-family: 'BetterGrade';
+    font-weight: 500;
+    font-size: 65px;
+    
+}
+
+nav ul{
+    padding-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    list-style: none;
+    font-family: 'Caros';
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+nav ul li {
+    cursor: pointer;
+     padding: 2px 12px;
+     transition: ease ;
+}
+
+nav ul li:hover{
+    border-left: var(--blue-green) 2px solid;
+    border-right: var(--blue-green) 2px solid;
+     padding: 2px 10px;
+   color: var(--orange);
+    border-radius: 10px;
+    transition: ease ;
+}
+nav ul li a:hover{
+      color: var(--orange);
+}
+
+nav .phone_number{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap:10px;
+    
+}
+
+nav .phone_number ion-icon{
+    position:relative;
+    top:-5px;
+    font-weight: 700;
+    padding: 6px 6px;
+ 
+    border-radius: 50%;
+    box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.2),
+    0px 1px 2px 1px rgb(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.button_mp3{
+    position:absolute;
+    top: 10px;
+    right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    font-family: 'Caros Soft ExtraBold';
+    color:#333;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button_mp3 h3 span{
+    font-size: 22px;
+    color: var(--blue-green)
+
+}
+.button_mp3 .border{
+    width: 30px;
+    height: 15px;
+    border: var(--orange);
+    border-radius: 7.5px ;
+    box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.2),
+    0px 1px 2px 1px rgb(0,0,0,0.1);
+    display: flex;
+    
+}
+
+.button_mp3 .border span{
+    content:"";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #e17f93;
+    position: relative;
+     box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.2),
+    0px 1px 2px 1px rgb(0,0,0,0.1);
+    left:3px;
+    top:1.2px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.button_mp3.active .border span{
+ left:14px;
+ transition: 0.2s  ease;
+ cursor: pointer;
+ background-color: #0abeb8;
+ box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.2),
+    0px 1px 2px 1px rgb(0,0,0,0.1),
+    0px 0px 10px #0abeb8, 0px 0px 40px #0abeb8, 0px 0px 80px;
+}
+
+.content{
+    
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.content img{
+    border-radius: 50%;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%) scale(0.36);
+    
+
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+    height: 100%;
+    justify-content: space-between;
+    padding: 30px  30px 120px 30px;
+    color:#333;   
+    
+}
+
+.left h1{
+    font-family: 'Caros Soft Extrabold';
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--dark-green)
+}
+
+.left h1 span{
+    font-family: 'BetterGrade';
+    max-width: 350px;
+    display: block;
+    font-size: 40px;
+    position: relative;
+    top:-10px;
+}
+
+.left .email p{
+    color: #333;
+    font-weight: 600;
+    font-family: 'Caros Soft Extrabold';
+
+}
+
+.left .email a{
+    text-decoration: none;
+        font-family: 'Caros Soft Extrabold';
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--blue-green)
+}
+
+.right{
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 50px 50px 120px 0px;
+    width: 50%;
+    height: 100%;
+    
+}
+
+.right .year, .right .project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    gap: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+
+.right .year span, .right .project span{
+    font-size: 36px;
+    font-family: 'Caros Soft Extrabold';
+    font-weight: 600;
+    
+}
+.right .media a{
+    text-decoration: none;
+}
+.right .media{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    top: 0px;
+    
+    font-size: 30px;
+    padding-right: 20px;
+    color:var(--blue-green)
+}
+.right .media a ion-icon{
+    padding: 10px;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+    color: var(--blue-green)
+}
+.right .media a ion-icon:hover{
+    color:var(--orange);
+    transform: scale(1.15) translateX(-10px);
+    transition: ease-in-out 0.5s;
+
+}
+
+.bottom_banner{
+    position:absolute;
+    bottom:0px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0px 20px;
+    max-height: 94px;
+    border-radius: 25px 25px 0px 25px;
+    width: 70vw;
+    background-color: #fff;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0,0.2);
+    border-bottom: 1px solid #ccc;
+    
+
+}
+
+.bottom_banner .title_banner{
+
+    display: block;
+    width: 100%;
+    z-index: 0;
+    padding: 50px 10px;
+    
+    font-family: 'Caros Soft ExtraBold';
+   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgba(64, 168, 168, 0.226);
+}
+.title_banner h2{
+    padding: 50px;
+    display: block;
+    color: #e17f9254;
+     font-size: 60px;
+     max-width: 300px;
+     text-align: center;
+     letter-spacing: -2.5px;
+    
+    position: absolute;
+    right: -50px;
+    line-height: 1;
+    top:50%;
+    transform: translateY(-50%);
+    
+}
+
+.title_banner p{
+    position: absolute;
+    color:#333;
+    font-size: 62px;
+    right:0;
+    
+    /* color:#337da8; */
+    color:var(--blue-green);
+    font-family: 'BetterGrade';
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: 3px;
+    
+}
+.title_banner span{
+    color: rgb(101,102,102);
+    font-size: 14px;
+    font-family: 'Caros Soft Medium';
+    left:0;
+    width: 80%;
+    padding: 50px;
+    position: absolute;
+}
+
+.title_banner span::before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--orange);
+    position: absolute;
+    left:0;
+      box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.3),
+    0px 0px 2px 1px rgb(0,0,0,0.2);
+}
+
+.title_banner .txt_banner{
+    position: absolute;
+}
+
+.bottom_banner .link .text-box{
+    width: 100%;
+    position: relative;
+    left: 40px;
+}
+
+.bottom_banner .link .detail{
+    font-size: 9px;
+    color:#333;
+    
+}
+
+.bottom_banner .link span{
+    padding: 8px;
+    font-size: 22px;
+    border-radius: 50%;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 1px 2px 1px rgb(0,0,0,0.3),
+    0px 1px 2px 2px rgb(0,0,0,0.2);
+}
+
+
+.bottom_banner .title_banner span{
+    font-size: 12px;
+    text-align: right;
+    padding: 5px 50px 5px 20px;
+    font-family: 'Caros Soft Medium';
+
+}
+.bottom_banner .link p{
+    font-size: 13px;
+    color: #296F6D;
+}
+
+
+.about_me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    width: 90vw;
+    border: 1px solid var(--orange);
+    background-color: #eeaa33 !important;   
+    margin: 50px auto auto;
+    position:relative;
+    
+      
+    border-top: 1px solid rgb(255,255,255);
+    box-shadow: 0px 20px 10px 0px rgb(0,0,0,0.2);
+    backdrop-filter: blur(2px);
+    padding: 20px 20px 40px 20px;
+    
+
+}
+
+.about_me h3{
+    font-family: 'Caros Soft ExtraBold';
+    padding: 5px 0px;
+    color: #333;
+    font-size: 26px;
+    margin-top:50px;
+    z-index:1;
+}
+ .wave{
+     display: block;
+    position:absolute;
+    top:-1px;
+    z-index: 0;
+    
+    
+    left:1;
+    right: -0.5px
+    
+}
+.wave2{
+    display: block;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index: 0;
+    
+}
+
+.carousel{
+    
+    max-width: 100%;
+    margin: auto;
+    padding: 10px 30px;
+   
+    
+}
+
+.carousel .card{
+
+
+    min-height: 150px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 10px;
+    position: relative;
+    justify-content:center;
+    align-items: center;
+    text-align: justify;
+    padding: 0px 15px;
+    box-shadow:  3px 3px 5px  rgb(0,0,0,0.2)
+}
+
+
+.carousel .card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position:absolute;
+    z-index: 2;
+    top:-25px;
+    left:0px;
+    right: 0px;
+    margin: 0 auto;
+    
+
+}
+
+.card p{
+    color: rgb(102, 101, 101);
+    font-family: 'Caros Soft';
+    text-align: center;
+}
+
+.card span{
+
+    font-family: 'Caros Soft ExtraBold';
+    color:#296F6D;
+    font-size: 15px;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+
+    
+}
+
+.rating{
+    position:absolute;
+    width: 12%;
+    top:15px;
+    left: 20px;
+}
+.work{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Caros Soft ExtraBold';
+    white-space: pre-wrap;
+    gap:25px;
+    line-height: 1;
+    margin-bottom: 20px;
+    
+}
+
+.wave_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.wave_container .header_wave{
+    position:absolute;
+    top:0;
+    left:0;    
+   
+}
+
+.work .project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    position: relative;
+     box-shadow: inset 2px 2px 3px 1px rgb(0,0,0,0.1),
+    5px 5px 5px 1px rgb(0,0,0,0.2);
+    height: 320px;
+    border-radius: 20px;
+    
+    
+    
+}
+
+.work img{
+    width: 230px;
+    margin:10px;
+    margin-top:20px;
+    
+    border-radius: 20px;
+    height: auto;
+}
+
+.work h2{
+    font-family: 'Caros Soft ExtraBold';
+    color: #333;
+    font-size: 32px;
+    display: block;
+    width: 100%;
+}
+
+.work h3{
+    color:#296F6D;
+    border-bottom: #ccc 1px solid;
+    width: 80%;
+    padding: 10px 0px;
+    font-family: 'BetterGrade';
+    font-size: 45px;
+    font-weight: 400;
+}
+.work p{
+    font-family: 'Caros Soft Medium';
+    width: 100%;
+    padding: 20px;
+    text-align: justify;
+    text-overflow: clip;
+}
+
+.work .project .imgBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    
+    height: 125px;
+    position: relative;
+    margin-bottom: 15px;
+    
+    gap: 20px;
+    
+}
+
+
+
+.imgBox img{
+ width: auto;
+ position:absolute;
+ top:0px;
+ padding:0px;
+ 
+ height: 100%;
+ border-radius: 10px !important;
+}
+
+.imgBox img:nth-child(1){
+    border-radius: 20px 0px 0px 20px;
+    
+}
+.imgBox img:nth-child(2){
+    border-radius: 0px 20px 20px 0px;
+    
+}
+
+.school img{
+
+    height: 80%
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    padding:6px 0px;
+    
+    gap:25px;
+    
+    justify-content: center;
+    align-content: flex-end;
+}
+
+.back_skill h2, .front_skill h2{
+    display: block;
+    width: 100%;
+    color:#1a8a86 !important;
+    
+    padding:0px 2px;
+    position:relative;
+    top:18px !important;
+    
+}
+.back_skill{
+    position:absolute;
+    color:#333;
+    font-family: 'Caros Soft Medium';
+    font-size: 16px;
+    bottom:0;
+    right:20px;
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    height: 150px;
+}
+.front_skill{
+    position:absolute;
+    color:#333;
+    font-family: 'Caros Soft Medium';
+    font-size: 16px;
+    bottom:0;
+    left:40px;
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    height: 150px;
+}
+
+
+
+}
